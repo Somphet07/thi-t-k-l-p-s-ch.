@@ -1,0 +1,69 @@
+#include
+#include
+
+using namespace std;
+
+class Sach {
+private:
+string idSach;
+string tenSach;
+string tacGia;
+bool trangThai;
+
+public:
+// Constructor
+Sach(string id, string ten, string tacGia, bool trangThai) {
+this->idSach = id;
+this->tenSach = ten;
+this->tacGia = tacGia;
+this->trangThai = trangThai;
+}
+
+// Getter và setter cho từng thuộc tính
+string getIdSach() {
+    return idSach;
+}
+
+void setIdSach(string id) {
+    this->idSach = id;
+}
+
+string getTenSach() {
+    return tenSach;
+}
+
+void setTenSach(string ten) {
+    this->tenSach = ten;
+}
+
+string getTacGia() {
+    return tacGia;
+}
+
+void setTacGia(string tacGia) {
+    this->tacGia = tacGia;
+}
+
+bool getTrangThai() {
+    return trangThai;
+}
+
+void setTrangThai(bool trangThai) {
+    this->trangThai = trangThai;
+}
+
+// Phương thức để in thông tin sách
+void inThongTinSach() {
+    cout << "ID sách: " << idSach << endl;
+    cout << "Tên sách: " << tenSach << endl;
+    cout << "Tác giả: " << tacGia << endl;
+    cout << "Trạng thái: " << (trangThai ? "Có sẵn" : "Đã được mượn") << endl;
+}
+};
+
+int main() {
+Sach sach1("001", "Harry Potter", "J.K. Rowling", true);
+sach1.inThongTinSach();
+
+return 0;
+}
